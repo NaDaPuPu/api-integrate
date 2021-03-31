@@ -25,7 +25,7 @@ function reducer(state, action) {
   }
 }
 
-function useAsync(callback, deps = [], skip = []) {
+function useAsync(callback, deps = [], skip = false) {
   const [state, dispatch] = useReducer(reducer, {
     loding: false,
     data: null,
